@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+  <title>
+    Obvious Captions
+  </title>
+  <meta name="description" content="Obvious Captions: Where the picture is obviously related to its caption.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://www.unrelatedcaptions.com/image_randomizer.css"/>
+</head>
+<body>
+    <!-- see https://getmdl.io/components/index.html#layout-section for more info -->
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <div class="logo-container">
+            <img src="/header.png" title="Obvious Captions: Where the picture is obviously related to its caption.">
+          </div>
+
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="https://www.gurukhalsa.me" target="_blank">About the author</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div id="controls-wrapper">
+          <button id="go-prev" class="mdl-button mdl-js-button mdl-button--raised mdl-button--raised"
+            onclick="javascript:navigateToPreviousImage();"
+          >
+            Back
+          </button>
+          <button id="go-next" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+            onclick="javascript:navigateToNextImage();"
+          >
+            Next
+          </button>
+        </div>
+        <div class="page-content">
+          <img id="main-image"/>          
+        </div>
+      </main>
+    </div>
+  
+  <script src="https://www.unrelatedcaptions.com/image_randomizer.js"></script>
+  <script>
+    setupImageRandomizer(305);
+  </script>
+</body>
